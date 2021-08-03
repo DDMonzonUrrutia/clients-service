@@ -1,1 +1,1 @@
-# products-service
+# clients-service
