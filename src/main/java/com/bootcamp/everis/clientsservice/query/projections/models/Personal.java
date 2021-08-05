@@ -12,8 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Setter
 @Getter
 @NoArgsConstructor
-@Document(collection = "client")
-@TypeAlias("personal")
+@Document
 public class Personal extends Client{
     private String firstname;
     private String lastname;

@@ -11,10 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Getter
 @Setter
-@Document(collection = "client")
 public class Client {
     @Id
     private String id;
     private String phone;
-
 }

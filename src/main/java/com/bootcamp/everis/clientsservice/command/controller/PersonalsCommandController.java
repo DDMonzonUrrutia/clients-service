@@ -18,13 +18,16 @@ public class PersonalsCommandController {
     @PostMapping("/personals")
     public Mono<PersonalResponseDto> createPersonal(@RequestBody PersonalRequestDto request) {
         Personal personal = PersonalRequestDto.personalRequestDtoToEntity(request);
-        return personalCommandService.createPersonal(personal).map(PersonalResponseDto::personalEntityToPersonalResponseDto).switchIfEmpty(Mono.error(new Exception("Error while create a personal client")));
+        return personalCommandService.createPersonal(personal)
+                .map(PersonalResponseDto::personalEntityToPersonalResponseDto)
+                .switchIfEmpty(Mono.error(new Exception("Error while create a personal client")));
     }
 
     @PutMapping("/personals")
     public Mono<PersonalResponseDto> updatePersonalById(@RequestParam String personalId, @RequestBody PersonalRequestDto request) {
         Personal personal = PersonalRequestDto.personalRequestDtoToEntity(request);
-        return personalCommandService.updatePersonal(personal, personalId).map(PersonalResponseDto::personalEntityToPersonalResponseDto);
+        return personalCommandService.updatePersonal(personal, personalId)
+                .map(PersonalResponseDto::personalEntityToPersonalResponseDto);
     }
 
     @DeleteMapping("/personals")

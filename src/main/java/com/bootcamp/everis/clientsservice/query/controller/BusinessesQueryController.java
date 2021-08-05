@@ -16,12 +16,12 @@ public class BusinessesQueryController {
     @Autowired
     private BusinessQueryService businessQueryService;
 
-    @GetMapping("/business")
+    @GetMapping("/businesses")
     public Flux<BusinessResponseDto> getAllBusinesses() {
         return businessQueryService.findAllBusinessClients().map(BusinessResponseDto::entityToResponse);
     }
 
-    @GetMapping("/business/{businessId}")
+    @GetMapping("/businesses/{businessId}")
     public Mono<BusinessResponseDto> getBusinessById(@PathVariable String businessId) {
         return businessQueryService.findBusinessClientById(businessId).map(BusinessResponseDto::entityToResponse);
     }

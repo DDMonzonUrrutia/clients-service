@@ -30,13 +30,13 @@ public class PersonalCommandServiceImpl implements PersonalCommandService {
                     return p;
                 })
                 .flatMap(personalRepository::save)
-                .switchIfEmpty(Mono.error(new Exception("Client not founded")));
+                .switchIfEmpty(Mono.error(new Exception("Personal Client not founded")));
     }
 
     @Override
     public Mono<Void> deletePersonal(String id) {
         return personalRepository.findById(id)
-                .switchIfEmpty(Mono.error(new Exception("Client not found")))
+                .switchIfEmpty(Mono.error(new Exception("Personal Client not found")))
                 .flatMap(personalRepository::delete);
     }
 

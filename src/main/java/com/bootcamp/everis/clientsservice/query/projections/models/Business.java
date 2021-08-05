@@ -7,8 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
 
-@Document(collection = "client")
-@TypeAlias("business")
+@Document
 @Getter
 @Setter
 public class Business extends Client{
