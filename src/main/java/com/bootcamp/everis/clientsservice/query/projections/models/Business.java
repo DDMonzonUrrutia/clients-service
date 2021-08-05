@@ -1,4 +1,4 @@
-package com.bootcamp.everis.clientsservice.domain.models;
+package com.bootcamp.everis.clientsservice.query.projections.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,7 @@ import java.util.Set;
 @TypeAlias("business")
 @Getter
 @Setter
-public class Business {
+public class Business extends Client{
     private String socialReason;
     private String ruc;
     private Set<String> credits;

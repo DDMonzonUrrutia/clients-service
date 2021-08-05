@@ -1,4 +1,4 @@
-package com.bootcamp.everis.clientsservice.configs;
+package com.bootcamp.everis.clientsservice.config;
 
 import com.mongodb.*;
 import com.mongodb.reactivestreams.client.MongoClient;
@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @Configuration
-@EnableReactiveMongoRepositories(basePackages = "com.bootcamp.everis.clientsservice.domain.respositories")
+@EnableReactiveMongoRepositories(basePackages = "com.bootcamp.everis.clientsservice.query.projections.repositories")
 public class MongoDbConfig extends AbstractReactiveMongoConfiguration {
 
     @Value("${dbname}")

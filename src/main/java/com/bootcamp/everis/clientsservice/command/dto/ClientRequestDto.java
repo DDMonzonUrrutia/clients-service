@@ -1,4 +1,4 @@
-package com.bootcamp.everis.clientsservice.dto;
+package com.bootcamp.everis.clientsservice.command.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,9 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
-@Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class ClientDto {
+public class ClientRequestDto {
     private String phone;
 }

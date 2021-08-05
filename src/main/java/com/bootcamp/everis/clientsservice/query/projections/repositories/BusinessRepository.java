@@ -1,6 +1,6 @@
-package com.bootcamp.everis.clientsservice.domain.respositories;
+package com.bootcamp.everis.clientsservice.query.projections.repositories;
 
-import com.bootcamp.everis.clientsservice.domain.models.Business;
+import com.bootcamp.everis.clientsservice.query.projections.models.Business;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 

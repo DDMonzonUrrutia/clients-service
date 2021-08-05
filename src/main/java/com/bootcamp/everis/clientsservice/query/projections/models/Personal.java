@@ -1,7 +1,6 @@
-package com.bootcamp.everis.clientsservice.domain.models;
+package com.bootcamp.everis.clientsservice.query.projections.models;
 
 import com.mongodb.lang.Nullable;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

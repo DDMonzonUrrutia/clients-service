@@ -1,4 +1,4 @@
-package com.bootcamp.everis.clientsservice.domain.models;
+package com.bootcamp.everis.clientsservice.query.projections.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
