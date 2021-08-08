@@ -7,6 +7,8 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotNull;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,4 +17,6 @@ public class Client {
     @Id
     private String id;
     private String phone;
+    @NotNull
+    private String clientType;
 }

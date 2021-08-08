@@ -22,7 +22,9 @@ public class PersonalsQueryController {
 
     @GetMapping("/personals/{personalId}")
     public Mono<PersonalResponseDto> getPersonalById(@PathVariable(name = "personalId") String personalId) {
-        return personalQueryService.findPersonalById(personalId).mapNotNull(PersonalResponseDto::personalEntityToPersonalResponseDto);
+        return personalQueryService.findPersonalById(personalId)
+                .map(PersonalResponseDto::personalEntityToPersonalResponseDto)
+                .onErrorResume(e -> Mono.error(new RuntimeException("Personal Client Not Founded")));
     }
     @GetMapping("/personals")
     public Flux<PersonalResponseDto> getAllPersonals() {

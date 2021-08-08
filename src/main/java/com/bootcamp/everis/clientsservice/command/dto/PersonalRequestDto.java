@@ -18,6 +18,7 @@ public class PersonalRequestDto extends ClientRequestDto{
         personal.setLastname(personalRequestDto.getLastname());
         personal.setPhone(personalRequestDto.getPhone());
         personal.setDoi(personalRequestDto.getDoi());
+        personal.setClientType("personal");
         return personal;
     }
 }

@@ -18,7 +18,7 @@ public class BusinessesQueryController {
 
     @GetMapping("/businesses")
     public Flux<BusinessResponseDto> getAllBusinesses() {
-        return businessQueryService.findAllBusinessClients().map(BusinessResponseDto::entityToResponse);
+        return businessQueryService.findAllBusinessClients().map(BusinessResponseDto::entityToResponse).onErrorResume(e -> Mono.error(new Exception("Business Client Not Founded")));
     }
 
     @GetMapping("/businesses/{businessId}")

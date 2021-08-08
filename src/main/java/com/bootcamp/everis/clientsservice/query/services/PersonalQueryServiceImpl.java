@@ -15,11 +15,11 @@ public class PersonalQueryServiceImpl implements PersonalQueryService {
 
     @Override
     public Mono<Personal> findPersonalById(String id) {
-        return personalRepository.findById(id);
+        return personalRepository.findById(id).switchIfEmpty(Mono.error(new RuntimeException("Personal Client Not founded")));
     }
 
     @Override
     public Flux<Personal> findAllPersonals() {
-        return personalRepository.findAll();
+        return personalRepository.findAllByClientType("personal");
     }
 }

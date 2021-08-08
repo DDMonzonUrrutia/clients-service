@@ -15,6 +15,7 @@ public class BusinessRequestDto extends ClientRequestDto{
         business.setPhone(request.getPhone());
         business.setRuc(request.getRuc());
         business.setSocialReason(request.getSocialReason());
+        business.setClientType("business");
         return business;
     }
 }

@@ -15,11 +15,11 @@ public class BusinessQueryServiceImpl implements BusinessQueryService {
 
     @Override
     public Flux<Business> findAllBusinessClients() {
-        return businessRepository.findAll();
+        return businessRepository.findAllByClientType("business");
     }
 
     @Override
     public Mono<Business> findBusinessClientById(String id) {
-        return businessRepository.findById(id);
+        return businessRepository.findById(id).switchIfEmpty(Mono.error(new RuntimeException("Business Client Not founded")));
     }
 }

@@ -9,10 +9,12 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.NotNull;
+
 @Setter
 @Getter
 @NoArgsConstructor
-@Document
+@Document(collection = "client")
 public class Personal extends Client{
     private String firstname;
     private String lastname;
@@ -24,13 +26,4 @@ public class Personal extends Client{
     @Field
     @Nullable
     private String account = null;
-
-    public Personal(String id, String phone, String firstname, String lastname, String doi, String credit, String account) {
-        super(id, phone);
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.doi = doi;
-        this.credit = credit;
-        this.account = account;
-    }
 }
