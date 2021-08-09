@@ -22,6 +22,7 @@ public class PersonalResponseDto extends ClientResponseDto {
         personalDto.setDoi(personal.getDoi());
         personalDto.setPhone(personal.getPhone());
         personalDto.setLastname(personal.getLastname());
+        personalDto.setClientType(personalDto.getClientType());
         return personalDto;
 
     }

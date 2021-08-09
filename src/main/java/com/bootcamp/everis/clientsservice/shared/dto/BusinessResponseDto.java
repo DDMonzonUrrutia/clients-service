@@ -19,6 +19,7 @@ public class BusinessResponseDto extends ClientResponseDto{
         businessResponseDto.setPhone(business.getPhone());
         businessResponseDto.setRuc(business.getRuc());
         businessResponseDto.setSocialReason(business.getSocialReason());
+        businessResponseDto.setClientType(business.getClientType());
         return businessResponseDto;
     }
 }
